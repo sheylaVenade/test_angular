@@ -1,0 +1,26 @@
+@import "/src/variables.scss";
+h1 {
+  color: $main-text;
+  font-family: Kanit-regular;
+  font-size: 3em;
+  margin: .2em;
+}
+h3 {
+  color: $primary-dark;
+  font-family: Kanit-regular;
+  font-size: 2em;
+  margin: .2em;
+  b { font-family: Kanit-bold;}
+}
+.page-title{
+  text-align: center;
+}
+.main {
+  text-align: center;
+  .card{
+    max-width: 100%;
+    margin: auto;
+    width: 500px;
+    height: 500px;
+  }
+}

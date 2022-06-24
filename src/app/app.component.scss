@@ -1,0 +1,18 @@
+@import "../variables.scss";
+.toolbar {
+  background-color: $primary;
+  color: $main_text;
+  height: 3.5em;
+  display: flex;
+  justify-content: space-between;
+  .logo {
+    flex: 1;
+    text-align: center;
+    padding: .3em 1em;
+    img{
+      -webkit-filter: drop-shadow(2px 2px 4px rgba($color: $main-text, $alpha: .5));
+      filter: drop-shadow(2px 2px 4px rgba($color: $main-text, $alpha: .5));
+      max-height: 100%;
+    }
+  }
+}

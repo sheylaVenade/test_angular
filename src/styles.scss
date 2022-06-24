@@ -1,1 +1,14 @@
-/* You can add global styles to this file, and also import other style files */
+@import "./variables.scss";
+html{
+  background: $background;
+}
+body { margin: 0; }
+.card {
+  border: 1em solid white;
+  padding: 1em;
+  background: $primary-dark;
+  background-image: url("/assets/img/img.png");
+  background-position: center;
+  background-size: 50%;
+  background-repeat: no-repeat;
+}
