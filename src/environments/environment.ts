@@ -3,7 +3,9 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  apiURL: 'https://api.unsplash.com/',
+  token: 'gL5gkKlrNhYrkkDFrFryRPCaT0XjgvgHYbASyXMPv-M'
 };
 
 /*

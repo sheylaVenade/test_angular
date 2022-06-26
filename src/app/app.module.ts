@@ -10,6 +10,7 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { ApiHttpService } from './core/api-http.service';
 
 export function httpTranslateLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http);
@@ -34,7 +35,7 @@ export function httpTranslateLoaderFactory(http: HttpClient) {
       }
     })
   ],
-  providers: [],
+  providers: [ApiHttpService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

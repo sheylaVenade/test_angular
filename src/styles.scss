@@ -5,10 +5,43 @@ html{
 body { margin: 0; }
 .card {
   border: 1em solid white;
-  padding: 1em;
-  background: $primary-dark;
+  background: $primary;
   background-image: url("/assets/img/img.png");
   background-position: center;
   background-size: 50%;
   background-repeat: no-repeat;
+  overflow: hidden;
+  box-shadow: 0px 0px 15px $primary_light;
+  img {
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    object-fit: cover;
+  }
+}
+.like-card{
+  position: relative;
+  display: inline-block;
+  .like {
+    position: absolute;
+    cursor: pointer;
+    right: 0;
+    color: $dark_pink;
+  }
+  .card{
+    margin: .5em;
+  }
+}
+button{
+  background: $primary;
+  border:none;
+  font-family: Kanit-regular;
+  color: $dark_text;
+  text-transform: uppercase;
+  font-size: 1.1em;
+  padding: .5em 1em;
+  cursor: pointer;
+  &:hover {
+    opacity: .9;
+  }
 }

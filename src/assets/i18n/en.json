@@ -1,7 +1,8 @@
 {
   "HOME_PAGE": {
     "TITLE": "Welcome!",
-    "SUBTITLE": "found this image for you..."
+    "SUBTITLE": "found this image for you...",
+    "SAVE_FOR_DAY": "Save for the day"
   },
   "USER_INFO":{
     "NAME":"Name",

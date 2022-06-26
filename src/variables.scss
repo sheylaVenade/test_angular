@@ -2,14 +2,16 @@ $primary: #ffcdd2;
 $primary_light: #fbebec;
 $primary_dark: #fba8a4;
 
-$background: #fff7f8;
+$background: #FFFBFC;
+$dark_pink: #ff507c;
 $main_text: #ba6b6c;
+$dark_text: #7a2934;
 
 @font-face {
-  font-family: Kanit-regular; 
+  font-family: Kanit-thin; 
   src: url('/assets/fonts/kanit/Kanit-Thin.ttf') format('truetype');
 }
 @font-face {
-  font-family: Kanit-bold; 
+  font-family: Kanit-regular; 
   src: url('/assets/fonts/kanit/Kanit-ExtraLight.ttf') format('truetype');
 }
