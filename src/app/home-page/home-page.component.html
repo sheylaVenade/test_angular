@@ -2,20 +2,11 @@
   <h1>{{'HOME_PAGE.TITLE' | translate}}</h1>
   <h3><b>Lupita</b> {{'HOME_PAGE.SUBTITLE' | translate}}</h3>
 </div>
-<div class="main">
+<main>
   <div>
-    <div class="like-card">
-      <i class="like fa-heart fa-lg"
-        ngClass="{{img.liked_by_user ? 'fas fa-beat' : 'far'}}" (click)="likeImage()"
-        [style]="img.liked_by_user ?
-        {'--fa-animation-iteration-count': '1', '--fa-animation-duration': '.5s', '--fa-animation-timing': 'ease-in-out', '--fa-beat-fade-scale': '3'}
-        : null"></i>
-      <div class="card">
-        <img src="{{ img?.urls?.regular }}" *ngIf="img && img.urls">
-      </div>
-    </div>
+    <app-like-card [img]="img"></app-like-card>
   </div>
   <button>
     {{'HOME_PAGE.SAVE_FOR_DAY' | translate}}
   </button>
-</div>
+</main>

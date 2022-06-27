@@ -15,21 +15,18 @@ h3 {
 .page-title{
   text-align: center;
 }
-.main {
-  text-align: center;
-  .like-card{
-    margin: auto;
-  }
-  .like{
-    font-size: 2.5em;
-  }
-  .card{
-    margin: 0em 1.2em;
-    max-width: 100%;
-    width: 450px;
-    height: 450px;
-  }
-  button {
-    margin: 10px;
-  }
+:host ::ng-deep .like-card{
+  margin: auto;
+}
+:host ::ng-deep .like{
+  font-size: 2.5em;
+}
+:host ::ng-deep .card{
+  margin: 0em 1.2em;
+  max-width: 100%;
+  width: 450px;
+  height: 450px;
+}
+button {
+  margin: 10px;
 }

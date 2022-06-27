@@ -1,0 +1,16 @@
+@import "/src/variables.scss";
+main {
+  height: 80vh;
+}
+.error-code {
+  font-size: 6em;
+  font-family: Kanit-bold;
+  color: $main_text;
+}
+h2 {
+font-family: Kanit-regular;
+color: $primary-dark;
+}
+.fa-heart-crack {
+  color: $dark_pink;
+}

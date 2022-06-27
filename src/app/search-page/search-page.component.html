@@ -1,1 +1,7 @@
-<p>search-page works!</p>
+<main>
+  <h3>{{'SEARCH_PAGE.MESSAGE' | translate}}</h3>
+  <div class="search">
+    <input type="text" (keyup.enter)="fillPage()" [(ngModel)]="search" />
+    <i class="search-icon fa-solid fa-magnifying-glass" (click)="fillPage()"></i>
+  </div>
+</main>

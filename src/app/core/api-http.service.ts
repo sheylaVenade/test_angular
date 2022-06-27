@@ -13,6 +13,11 @@ export class ApiHttpService {
     console.log(options)
     return this.http.get(environment.apiURL + "photos/random", options);
   }
+  public getPage(options?: any) {
+    options = Object.assign({headers: this.getHeaders()}, options);
+    console.log(options)
+    return this.http.get(environment.apiURL + "search/photos", options);
+  }
   public getHeaders() {
     let apiHeaders = new HttpHeaders();
     apiHeaders = apiHeaders.set("Content-Type", "application/json")

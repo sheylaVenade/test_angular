@@ -4,12 +4,11 @@
     "SUBTITLE": "found this image for you...",
     "SAVE_FOR_DAY": "Save for the day"
   },
-  "USER_INFO":{
-    "NAME":"Name",
-    "WORKING_PROFILE":"Working Profile",
-    "ADDRESS_DETAILS":"Address Details",
-    "PHONE_NUMBER":"Phone Number",
-    "EMAIL_ADDRESS":"Email Address",
-    "RELEVANT_EXPERIENCE":"Relevant Experience"
+  "NOT_FOUND_PAGE": {
+    "MESSAGE": "Woops! Seems like this page doesn't exist.",
+    "BACK_HOME": "Go back home"
+  },
+  "SEARCH_PAGE":{
+    "MESSAGE":"What are you looking for?"
   }
 }

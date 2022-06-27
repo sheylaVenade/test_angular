@@ -19,8 +19,4 @@ export class HomePageComponent implements OnInit {
     ); */
   }
 
-  likeImage(): void {
-    this.img.liked_by_user = !this.img.liked_by_user
-  }
-
 }

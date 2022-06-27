@@ -1,0 +1,10 @@
+<div class="like-card">
+  <i class="like fa-heart fa-lg"
+    ngClass="{{img.liked_by_user ? 'fas fa-beat' : 'far'}}" (click)="likeImage()"
+    [style]="img.liked_by_user ?
+    {'--fa-animation-iteration-count': '1', '--fa-animation-duration': '.5s', '--fa-animation-timing': 'ease-in-out', '--fa-beat-fade-scale': '3'}
+    : null"></i>
+  <div class="card">
+    <img src="{{ img?.urls?.regular }}" *ngIf="img && img.urls">
+  </div>
+</div>

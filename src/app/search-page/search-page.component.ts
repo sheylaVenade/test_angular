@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ApiHttpService } from '../core/api-http.service';
 
 @Component({
   selector: 'app-search-page',
@@ -6,10 +7,17 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./search-page.component.scss']
 })
 export class SearchPageComponent implements OnInit {
-
-  constructor() { }
+  public images = []
+  search = ''
+  constructor(private apiHttpService: ApiHttpService) { }
 
   ngOnInit(): void {
   }
-
+  fillPage(page?: number): void {
+    console.log(page)
+    this.apiHttpService.getPage({params: { query: this.search}}).subscribe(
+      (data) => {this.images = (data as any); console.log(this.images)},
+      error => console.log(error)
+    );
+  }
 }

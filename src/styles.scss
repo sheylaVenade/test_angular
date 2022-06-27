@@ -2,6 +2,12 @@
 html{
   background: $background;
 }
+main {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
 body { margin: 0; }
 .card {
   border: 1em solid white;
@@ -32,7 +38,8 @@ body { margin: 0; }
     margin: .5em;
   }
 }
-button{
+button, .button{
+  text-decoration: none;
   background: $primary;
   border:none;
   font-family: Kanit-regular;
@@ -44,4 +51,11 @@ button{
   &:hover {
     opacity: .9;
   }
+}
+input[type="text"] {
+  border: 1px solid $primary;
+  border-radius: 1em;
+  padding: .5em 1em;
+  outline: none;
+  color: $dark_text;
 }
