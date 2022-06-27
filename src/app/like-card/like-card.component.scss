@@ -1,0 +1,28 @@
+@import "/src/variables.scss";
+.tooltip-img::before {
+  content: attr(data-text); /* here's the magic */
+  position:absolute;
+
+  
+  /* basic styles */
+  padding:.2em 1em;
+  border-radius:10px;
+  background: rgba($dark_text, .8);
+  color: #fff;
+  font-family: Kanit-bold;
+  text-align:center;
+  bottom: 0;
+  max-width: 100%;
+  width: fit-content;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity:0;
+  transition:.3s opacity;
+}
+
+.tooltip-img:hover::before {
+  opacity:1;
+}
+.tooltip-img {
+  position:relative; /* making the .tooltip span a container for the tooltip text */
+}

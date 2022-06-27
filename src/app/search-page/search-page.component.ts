@@ -8,6 +8,7 @@ import { ApiHttpService } from '../core/api-http.service';
 })
 export class SearchPageComponent implements OnInit {
   public images = []
+  public isLoading = false
   search = ''
   constructor(private apiHttpService: ApiHttpService) { }
 
@@ -15,9 +16,10 @@ export class SearchPageComponent implements OnInit {
   }
   fillPage(page?: number): void {
     console.log(page)
+    this.isLoading = true
     this.apiHttpService.getPage({params: { query: this.search}}).subscribe(
-      (data) => {this.images = (data as any); console.log(this.images)},
-      error => console.log(error)
+      (data) => {this.images = (data as any).results; this.isLoading = false},
+      error => { console.log(error); this.isLoading = false }
     );
   }
 }

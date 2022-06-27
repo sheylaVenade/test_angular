@@ -4,4 +4,11 @@
     <input type="text" (keyup.enter)="fillPage()" [(ngModel)]="search" />
     <i class="search-icon fa-solid fa-magnifying-glass" (click)="fillPage()"></i>
   </div>
+  <div class="gallery">
+    <div *ngFor="let img of images">
+
+      <app-like-card [img]="img"></app-like-card>
+    </div>
+    <i *ngIf="isLoading" class="loading-ellipsis fa-3x fa-solid fa-ellipsis fa-bounce"></i>
+  </div>
 </main>

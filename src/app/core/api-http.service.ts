@@ -10,13 +10,20 @@ export class ApiHttpService {
   }
   public getRandom(options?: any) {
     options = Object.assign({headers: this.getHeaders()}, options);
-    console.log(options)
     return this.http.get(environment.apiURL + "photos/random", options);
   }
   public getPage(options?: any) {
     options = Object.assign({headers: this.getHeaders()}, options);
-    console.log(options)
     return this.http.get(environment.apiURL + "search/photos", options);
+  }
+  public likeImage(image?: any) {
+    let options = { headers: this.getHeaders() };
+    let url = `/photos/${image.id}/like`
+    if (image.liked_by_user) {
+      return this.http.delete(environment.apiURL + url, options);
+    } else {
+      return this.http.post(environment.apiURL + url, options);
+    }
   }
   public getHeaders() {
     let apiHeaders = new HttpHeaders();

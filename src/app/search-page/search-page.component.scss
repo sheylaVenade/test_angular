@@ -22,3 +22,27 @@ h3 {
     cursor: pointer;
   }
 }
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+:host ::ng-deep .like {
+  font-size: 1.7em;
+}
+:host ::ng-deep .like-card{
+  width: 400px;
+  height: 400px;
+  box-sizing: border-box;
+  padding: 1em;
+}
+:host ::ng-deep .card{
+  width: 100%;
+  height: 100%;
+  margin: 0em;
+  box-sizing: border-box;
+}
+.loading-ellipsis {
+  padding: 20px;
+  color: $dark-text;
+}

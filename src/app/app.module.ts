@@ -38,6 +38,7 @@ export function httpTranslateLoaderFactory(http: HttpClient) {
         deps: [HttpClient]
       }
     })
+    
   ],
   providers: [ApiHttpService],
   bootstrap: [AppComponent]

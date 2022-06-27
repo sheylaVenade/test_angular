@@ -13,10 +13,10 @@ export class HomePageComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    /* this.apiHttpService.getRandom().subscribe(
+    this.apiHttpService.getRandom().subscribe(
       (data) => this.img = (data as any), // success path
       error =>console.log(error) // error path
-    ); */
+    );
   }
 
 }
