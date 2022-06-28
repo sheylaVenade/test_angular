@@ -43,6 +43,23 @@ h3 {
   box-sizing: border-box;
 }
 .loading-ellipsis {
-  padding: 20px;
+  padding: 10px 0 40px;
   color: $dark-text;
+  width: 100%;
+  text-align: center;
+  opacity: 0;
+  &.visible {
+    opacity: 1;
+  }
+}
+.max-images-msg {
+  color: $dark-text;
+  button{ margin-left: 10px; }
+}
+.no-more-images {
+  color: $dark-text;
+  font-weight: 500;
+  text-align: center;
+  width: 100%;
+  font-size: 1.3em
 }

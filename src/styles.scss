@@ -1,10 +1,12 @@
 
+/* Importing Bootstrap SCSS file. */
 @import "./variables.scss";
 html{
   background: $background;
   body {
     margin: 0;
     background-color: transparent;
+    font-family: Kanit-regular;
   }
 }
 h3 {

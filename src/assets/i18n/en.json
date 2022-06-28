@@ -1,4 +1,5 @@
 {
+  "YES": "Yes",
   "HOME_PAGE": {
     "TITLE": "Welcome!",
     "SUBTITLE": "found this image for you...",
@@ -9,6 +10,8 @@
     "BACK_HOME": "Go back home"
   },
   "SEARCH_PAGE":{
-    "MESSAGE":"What are you looking for?"
+    "MESSAGE": "What are you looking for?",
+    "MAX_IMAGES_MESSAGE": "You have reached the maximum number of images per page. Clean the page for new images?",
+    "NO_MORE_IMAGES": "Nothing more to show!"
   }
 }

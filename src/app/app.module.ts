@@ -13,6 +13,7 @@ import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { ApiHttpService } from './core/api-http.service';
 import { LikeCardComponent } from './like-card/like-card.component';
+import { InfiniteScrollModule } from 'ngx-infinite-scroll';
 
 export function httpTranslateLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http);
@@ -31,6 +32,7 @@ export function httpTranslateLoaderFactory(http: HttpClient) {
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
+    InfiniteScrollModule,
     TranslateModule.forRoot({
       loader: {
         provide: TranslateLoader,

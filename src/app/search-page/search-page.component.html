@@ -4,11 +4,17 @@
     <input type="text" (keyup.enter)="fillPage()" [(ngModel)]="search" />
     <i class="search-icon fa-solid fa-magnifying-glass" (click)="fillPage()"></i>
   </div>
-  <div class="gallery">
-    <div *ngFor="let img of images">
-
-      <app-like-card [img]="img"></app-like-card>
-    </div>
-    <i *ngIf="isLoading" class="loading-ellipsis fa-3x fa-solid fa-ellipsis fa-bounce"></i>
+  <div class="gallery" infiniteScroll [infiniteScrollDistance]="0"  (scrolled)="onScroll()">
+      <app-like-card [img]="img" *ngFor="let img of images"></app-like-card>
+      <div class="max-images-msg" *ngIf="images.length >= maxImages">
+        {{'SEARCH_PAGE.MAX_IMAGES_MESSAGE' | translate}}
+        <button (click)="cleanReload()">{{'YES' | translate}}</button>
+      </div>
+      <div class="no-more-images" *ngIf="totalPages && currentPage >= totalPages">
+        {{'SEARCH_PAGE.NO_MORE_IMAGES' | translate}}
+      </div>
+      <div class="loading-ellipsis" [ngClass]="{ 'visible': isLoading }">
+        <i class="fa-3x fa-solid fa-ellipsis fa-bounce"></i>
+      </div>
   </div>
 </main>
