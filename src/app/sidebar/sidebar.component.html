@@ -1,0 +1,11 @@
+<div id="sidebar">
+  <img class="logo" src="/assets/img/lupita.png" />
+  <div class="menu">
+    <div class="menu-item" *ngFor="let page of pages">
+      <i [ngClass]="page.icon"></i>
+      <label>
+        {{page.name | translate}}
+      </label>
+    </div>
+  </div>
+</div>

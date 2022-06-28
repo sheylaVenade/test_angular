@@ -14,6 +14,7 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { ApiHttpService } from './core/api-http.service';
 import { LikeCardComponent } from './like-card/like-card.component';
 import { InfiniteScrollModule } from 'ngx-infinite-scroll';
+import { SidebarComponent } from './sidebar/sidebar.component';
 
 export function httpTranslateLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http);
@@ -25,7 +26,8 @@ export function httpTranslateLoaderFactory(http: HttpClient) {
     HomePageComponent,
     SearchPageComponent,
     PageNotFoundComponent,
-    LikeCardComponent
+    LikeCardComponent,
+    SidebarComponent
   ],
   imports: [
     BrowserModule,

@@ -9,6 +9,7 @@
 
 <!-- Toolbar -->
 <div class="toolbar" role="banner">
+  <app-sidebar *ngIf="true"></app-sidebar>
   <i class="menu fa fa-bars fa-2x"></i>
   <div class="logo">
     <img src="/assets/img/lupita.png" />
@@ -68,5 +69,5 @@
   <router-outlet></router-outlet>
 </div>
 <footer>
-   test foo
+  Copyright <i class="fa-regular fa-copyright"></i><b> Sheyla Venade Carrascal</b> {{ currentYear }}
 </footer>

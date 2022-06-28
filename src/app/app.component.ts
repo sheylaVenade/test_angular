@@ -9,6 +9,7 @@ import { ApiHttpService } from './core/api-http.service';
 })
 export class AppComponent {
   title = 'Lupita Images';
+  currentYear = new Date().getFullYear();
   constructor(public translate: TranslateService, private apiHttpService: ApiHttpService) {
     // Register translation languages
     translate.addLangs(['en', 'es', 'gl']);
