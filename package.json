@@ -3,11 +3,13 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
-    "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "postinstall": "ng build --prod"
+    "postinstall": "ng build --prod",
+
+    "preinstall": "npm config set package-lock false",
+    "start": "node server.js",
+    "build": "npm install"
   },
   "engines": {
     "node": "14.18.1",
