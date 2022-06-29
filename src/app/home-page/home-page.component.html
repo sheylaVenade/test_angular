@@ -6,7 +6,15 @@
   <div>
     <app-like-card [img]="img"></app-like-card>
   </div>
-  <button>
-    {{'HOME_PAGE.SAVE_FOR_DAY' | translate}}
+  <button (click)="saveImage()">
+    <span *ngIf="todayImage.image; then newTemplate else saveTemplate"></span>
+    <ng-template #saveTemplate>
+      <label> {{'HOME_PAGE.SAVE_FOR_DAY' | translate}} </label>
+      <i class="fa-solid fa-thumbtack"></i>
+    </ng-template>
+    
+    <ng-template #newTemplate>
+      <label>{{'HOME_PAGE.NEW_IMAGE' | translate}}</label>
+    </ng-template>
   </button>
 </main>

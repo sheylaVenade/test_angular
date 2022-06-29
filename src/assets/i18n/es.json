@@ -1,11 +1,18 @@
 {
-  "TITLE": "Welcome, your profile details are",
-  "USER_INFO":{
-    "NAME":"Name",
-    "WORKING_PROFILE":"Working Profile",
-    "ADDRESS_DETAILS":"Address Details",
-    "PHONE_NUMBER":"Phone Number",
-    "EMAIL_ADDRESS":"Email Address",
-    "RELEVANT_EXPERIENCE":"Relevant Experience"
+  "YES": "Si",
+  "HOME_PAGE": {
+    "TITLE": "¡Bienvenido!",
+    "SUBTITLE": "ha encontrado esta imagen para ti...",
+    "SAVE_FOR_DAY": "Mostrar todo el día",
+    "NEW_IMAGE": "¡No! ¡Quiero otra imagen!"
+  },
+  "NOT_FOUND_PAGE": {
+    "MESSAGE": "¡Woops! Parece que esta página no existe.",
+    "BACK_HOME": "Volver al Inicio"
+  },
+  "SEARCH_PAGE":{
+    "MESSAGE": "¿Qué estás buscando?",
+    "MAX_IMAGES_MESSAGE": "Has alcanzado el número máximo de imágenes por página. ¿Limpiar la página y cargar más imágenes?",
+    "NO_MORE_IMAGES": "¡Nada más por aquí!"
   }
 }

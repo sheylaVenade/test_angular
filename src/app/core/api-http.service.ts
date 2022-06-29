@@ -12,6 +12,11 @@ export class ApiHttpService {
     options = Object.assign({headers: this.getHeaders()}, options);
     return this.http.get(environment.apiURL + "photos/random", options);
   }
+  public getPhoto(id:any) {
+    let options = {headers: this.getHeaders()};
+    return this.http.get(environment.apiURL + "photos/" + id, options);
+  }
+
   public getPage(options?: any) {
     options = Object.assign({headers: this.getHeaders()}, options);
     return this.http.get(environment.apiURL + "search/photos", options);

@@ -3,7 +3,8 @@
   "HOME_PAGE": {
     "TITLE": "Welcome!",
     "SUBTITLE": "found this image for you...",
-    "SAVE_FOR_DAY": "Save for the day"
+    "SAVE_FOR_DAY": "Save for the day",
+    "NEW_IMAGE": "No! I want a new Image!"
   },
   "NOT_FOUND_PAGE": {
     "MESSAGE": "Woops! Seems like this page doesn't exist.",
