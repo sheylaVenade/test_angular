@@ -1,0 +1,12 @@
+<main>
+  <h3 class="page-title">{{ "WELCOME" | translate}}</h3>
+  <div class="page-message">{{ "LOGIN.LOGIN_MESSAGE" | translate}}</div>
+  <div class="page-question">{{ "LOGIN.LOGIN_QUESTION" | translate}}</div>
+
+  <a class="button" [href]="'https://unsplash.com/oauth/authorize?client_id=' + envVars.token + '&redirect_uri=' + envVars.frontUrl + '&response_type=code'">
+    {{ "LOGIN.LOGIN" | translate }}
+  </a>
+  <button (click)="enterAsGuess()">
+    {{ "LOGIN.CONTINUE_GUESS" | translate }}
+  </button>
+</main>

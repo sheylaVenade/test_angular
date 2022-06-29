@@ -1,0 +1,19 @@
+@import "/src/variables.scss";
+h3{
+  color:  $main-text;
+  font-size: 3em;
+  margin: .6em;
+}
+.page-message{
+  color: $dark-text;
+  font-size: 1.5em;
+}
+.page-question{
+  color: $dark-pink;
+  font-size: 1.1em;
+  margin-bottom: 15px;
+  font-family: Kanit-bold;
+}
+button {
+  margin: 10px 0;
+}

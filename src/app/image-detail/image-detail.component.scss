@@ -1,0 +1,64 @@
+@import "../../variables.scss";
+.page-title {
+  font-size: 3em;
+  color: $main_text;
+  font-family: Kanit-bold;
+}
+:host ::ng-deep .like{
+  font-size: 2.5em;
+}
+:host ::ng-deep .card{
+  margin: 0em 1.2em;
+  max-width: 100%;
+  width: 400px;
+  height: 400px;
+}
+.form {
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 1.2em;
+  justify-content: space-evenly;
+
+  .img-container{
+    padding: 10px;
+    flex: 1;
+  }
+  .image-info {
+    flex:2;
+    padding: 10px;
+    .sub-title {
+      font-size: 1.3em;
+      text-transform: uppercase;
+      color: $dark_text;
+      font-family: Kanit-bold;
+      margin-top: 10px;
+    }
+    .field{
+      label{
+        color:$dark_text;
+        display: block;
+        font-family: Kanit-thin;
+        .color {
+          background: transparent;
+          display: inline-block;
+          height: .8em;
+          width: .8em;
+          border-radius: 2px;
+          border: 1px solid $main_text;
+        }
+      }
+      .content {
+        color:$main_text;
+        font-family: Kanit-bold;
+        .subcontent {
+          padding: 0 5px;
+        }
+      }
+    }
+  }
+}
+.error {
+  padding: 10px;
+  color: $dark_text;
+  font-size: 1.2em;
+}

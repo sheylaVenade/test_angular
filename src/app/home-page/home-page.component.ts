@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { ApiHttpService } from '../core/api-http.service';
+import { ApiHttpService } from '../core/services/api-http.service';
+import { Router, ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-home-page',
@@ -9,7 +10,7 @@ import { ApiHttpService } from '../core/api-http.service';
 export class HomePageComponent implements OnInit {
   public img : any = {}
   public todayImage : any
-  constructor(private apiHttpService: ApiHttpService) {
+  constructor(private apiHttpService: ApiHttpService, private router: Router) {
     
   }
 
@@ -34,6 +35,9 @@ export class HomePageComponent implements OnInit {
     );
     
   }
+
+  
+
   saveImage(): void {
     if (this.todayImage.image) {
       localStorage.removeItem('todayImage')
@@ -46,6 +50,11 @@ export class HomePageComponent implements OnInit {
       let imageToSave = { image: this.img.id, date: new Date() }
       localStorage.setItem('todayImage', JSON.stringify(imageToSave))
       this.todayImage = imageToSave
+    }
+  }
+  loadImage(img : any): void {
+    if (img.id) {
+      this.router.navigate(['/detail/' + img.id]);
     }
   }
 

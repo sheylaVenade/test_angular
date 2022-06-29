@@ -7,6 +7,12 @@
         {{page.name | translate}}
       </label>
     </div>
+    <div class="menu-item" (click)="logout()">
+      <i class="fa-solid fa-arrow-right-from-bracket"></i>
+      <label>
+        LOGOUT
+      </label>
+    </div>
   </div>
   <div class="close-button" (click)="emitClose()">
     <i class="fa-solid fa-angles-left fa-xl"></i>

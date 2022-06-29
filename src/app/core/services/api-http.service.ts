@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core'; 
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { environment } from '../../environments/environment';
+import { environment } from '../../../environments/environment';
 
 
 @Injectable()
@@ -21,13 +21,22 @@ export class ApiHttpService {
     options = Object.assign({headers: this.getHeaders()}, options);
     return this.http.get(environment.apiURL + "search/photos", options);
   }
+
+  public getUserToken(data:any) {
+    data = Object.assign(data, {client_id: environment.token, client_secret: environment.secret, grant_type: "authorization_code", redirect_uri: environment.frontUrl})
+    let options = data;
+    let url = 'oauth/token'
+    return this.http.post(environment.unsplashURL + url, options);
+  }
+
   public likeImage(image?: any) {
-    let options = { headers: this.getHeaders() };
-    let url = `/photos/${image.id}/like`
+    let headers = this.getHeaders().set("Authorization", "Bearer " + localStorage.getItem("userToken"))
+    let options = { headers: headers };
+    let url = `photos/${image.id}/like`
     if (image.liked_by_user) {
-      return this.http.delete(environment.apiURL + url, options);
+      return this.http.delete(environment.apiURL + url,  options);
     } else {
-      return this.http.post(environment.apiURL + url, options);
+      return this.http.post(environment.apiURL + url, {}, options);
     }
   }
   public getHeaders() {

@@ -14,5 +14,8 @@
     "MESSAGE": "¿Qué estás buscando?",
     "MAX_IMAGES_MESSAGE": "Has alcanzado el número máximo de imágenes por página. ¿Limpiar la página y cargar más imágenes?",
     "NO_MORE_IMAGES": "¡Nada más por aquí!"
+  },
+  "DETAIL_PAGE": {
+    "MORE_INFO": "Más información"
   }
 }

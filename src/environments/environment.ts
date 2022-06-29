@@ -5,7 +5,10 @@
 export const environment = {
   production: false,
   apiURL: 'https://api.unsplash.com/',
-  token: 'gL5gkKlrNhYrkkDFrFryRPCaT0XjgvgHYbASyXMPv-M'
+  unsplashURL: 'https://unsplash.com/',
+  token: 'gL5gkKlrNhYrkkDFrFryRPCaT0XjgvgHYbASyXMPv-M',
+  secret: 'ayX6hwFKTq2DiwU2J4am3Xdffh4mO4N6BkIGsDcEMc4',
+  frontUrl: 'http://localhost:4200/home'
 };
 
 /*

@@ -11,10 +11,13 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
-import { ApiHttpService } from './core/api-http.service';
+import { ApiHttpService } from './core/services/api-http.service';
 import { LikeCardComponent } from './like-card/like-card.component';
 import { InfiniteScrollModule } from 'ngx-infinite-scroll';
 import { SidebarComponent } from './sidebar/sidebar.component';
+import { ImageDetailComponent } from './image-detail/image-detail.component';
+import { AuthGuard } from './core/services/nav-gard';
+import { LoginPageComponent } from './login-page/login-page.component';
 
 export function httpTranslateLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http);
@@ -27,7 +30,9 @@ export function httpTranslateLoaderFactory(http: HttpClient) {
     SearchPageComponent,
     PageNotFoundComponent,
     LikeCardComponent,
-    SidebarComponent
+    SidebarComponent,
+    ImageDetailComponent,
+    LoginPageComponent
   ],
   imports: [
     BrowserModule,
@@ -44,7 +49,7 @@ export function httpTranslateLoaderFactory(http: HttpClient) {
     })
     
   ],
-  providers: [ApiHttpService],
+  providers: [ApiHttpService, AuthGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

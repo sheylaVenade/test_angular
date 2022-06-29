@@ -5,7 +5,7 @@
     <i class="search-icon fa-solid fa-magnifying-glass" (click)="fillPage()"></i>
   </div>
   <div class="gallery" infiniteScroll [infiniteScrollDistance]="0"  (scrolled)="onScroll()">
-      <app-like-card [img]="img" *ngFor="let img of images"></app-like-card>
+      <app-like-card [img]="img" *ngFor="let img of images" (cardClick)="loadImage($event)"></app-like-card>
       <div class="max-images-msg" *ngIf="images.length >= maxImages">
         {{'SEARCH_PAGE.MAX_IMAGES_MESSAGE' | translate}}
         <button (click)="cleanReload()">{{'YES' | translate}}</button>

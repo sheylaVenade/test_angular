@@ -1,12 +1,11 @@
 <div class="like-card" [ngClass]="{'tooltip-img': img.description}" [attr.data-text]="img.description">
   <i class="like fa-heart fa-lg"
+    *ngIf="logged"
     ngClass="{{img.liked_by_user ? 'fas fa-beat' : 'far'}}" (click)="likeImage()"
     [style]="img.liked_by_user ?
     {'--fa-animation-iteration-count': '1', '--fa-animation-duration': '.5s', '--fa-animation-timing': 'ease-in-out', '--fa-beat-fade-scale': '3'}
     : null"></i>
-  <div class="card">
-    <a [href]="img?.urls?.raw" target="_blank" *ngIf="img && img.urls" >
-      <img src="{{ img?.urls?.regular }}" >
-    </a>
+  <div class="card" (click)="emitClick()">
+    <img *ngIf="img && img.urls" src="{{ img?.urls?.regular }}" >
   </div>
 </div>

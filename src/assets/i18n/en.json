@@ -1,5 +1,6 @@
 {
   "YES": "Yes",
+  "Welcome": "Welcome",
   "HOME_PAGE": {
     "TITLE": "Welcome!",
     "SUBTITLE": "found this image for you...",
@@ -14,5 +15,20 @@
     "MESSAGE": "What are you looking for?",
     "MAX_IMAGES_MESSAGE": "You have reached the maximum number of images per page. Clean the page for new images?",
     "NO_MORE_IMAGES": "Nothing more to show!"
+  },
+  "DETAIL_PAGE": {
+    "MORE_INFO": "More info",
+    "IMAGE_NOT_FOUND": "Your image was not found! Check your link.",
+    "NUMBER_DOWNLOADS": "Downloads Number",
+    "COLOR": "Color",
+    "DESCRIPTION": "Description",
+    "USER": "User",
+    "NAME": "Name"
+  },
+  "LOGIN": {
+    "LOGIN_MESSAGE": "This page uses photos from Unsplash. By login in you can access to more features, like giving likes to photos.",
+    "LOGIN_QUESTION": "Would you like to login?",
+    "LOGIN": "Login on Unsplash",
+    "CONTINUE_GUESS": "Continue as Guess"
   }
 }

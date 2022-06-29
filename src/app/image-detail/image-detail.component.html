@@ -1,0 +1,55 @@
+<main>
+  <div class="page-title">
+    {{ 'DETAIL_PAGE.MORE_INFO' | translate }}
+  </div>
+  <div *ngIf="errorMessage; then errorTemplate else formTemplate"></div>
+  <ng-template #errorTemplate>
+    <div class="error">
+      {{ errorMessage | translate }} 
+    </div>
+  </ng-template>
+  <ng-template #formTemplate>
+    <div class="form">
+      <div class="img-container">
+        <app-like-card [img]="image"></app-like-card>
+      </div>
+      <div class="image-info">
+        <div>
+          <div class="field">
+            <label>{{'DETAIL_PAGE.DESCRIPTION' | translate}}:</label>
+            <span class="content">{{image.description}}</span>
+          </div>
+          <div class="field">
+            <label>{{'DETAIL_PAGE.NUMBER_DOWNLOADS' | translate}}:</label>
+            <span class="content">{{image.downloads}}</span>
+          </div>
+          <div class="field">
+            <label>
+              {{'DETAIL_PAGE.COLOR' | translate}}:
+              <span class="color" [style]="{'background': image.color}"></span>
+            </label>
+          </div>
+
+          <div class="sub-title">
+            {{'DETAIL_PAGE.USER' | translate}}
+          </div>
+          <div class="field">
+            <label>{{'DETAIL_PAGE.NAME' | translate}}:</label>
+            <span *ngIf="image.user" class="content">{{image.user.name}}</span>
+          </div>
+
+          <div class="field">
+            <div class="content">
+              <span class="subcontent">
+                <i class="fa-regular fa-heart"></i> {{image.likes}}
+              </span>
+              <span class="subcontent">
+                <i class="fa-regular fa-eye"></i> {{image.views}}
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </ng-template>
+</main>

@@ -4,7 +4,7 @@
 </div>
 <main>
   <div>
-    <app-like-card [img]="img"></app-like-card>
+    <app-like-card [img]="img" (cardClick)="loadImage($event)"></app-like-card>
   </div>
   <button (click)="saveImage()">
     <span *ngIf="todayImage.image; then newTemplate else saveTemplate"></span>

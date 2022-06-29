@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { ApiHttpService } from '../core/api-http.service';
+import { ApiHttpService } from '../core/services/api-http.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-search-page',
@@ -13,7 +14,7 @@ export class SearchPageComponent implements OnInit {
   currentPage = 1;
   totalPages = 0;
   maxImages = 20;
-  constructor(private apiHttpService: ApiHttpService) { }
+  constructor(private apiHttpService: ApiHttpService, private router: Router) { }
 
   ngOnInit(): void {
   }
@@ -43,6 +44,11 @@ export class SearchPageComponent implements OnInit {
         },
         error => { console.log(error); this.isLoading = false }
       )
+    }
+  }
+  loadImage(img : any): void {
+    if (img.id) {
+      this.router.navigate(['/detail/' + img.id]);
     }
   }
 }
